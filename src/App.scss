@@ -1,32 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Colors
+$color-light: #b4bac5;
+$color-dark: "black";
+$color-accent: #df7e23;
+
+//Font Sizes
+$fs-h1: 5rem;
+$fs-h3: 2rem;
+
+@mixin titles-h1 {
+  font-size: $fs-h1;
+  letter-spacing: 0.5rem;
+}
+
+@mixin titles-h3 {
+  font-size: $fs-h3;
+  letter-spacing: 0.5rem;
+}
+
 .App {
-}
-
-.header {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  padding: 0 2em;
-}
-
-.name {
-  letter-spacing: 0.7rem;
-  text-align: right;
+  flex-direction: column;
+  justify-content: space-evenly;
   h1 {
-    font-size: 5rem;
-    margin-bottom: 0;
+    @include titles-h1;
   }
   h3 {
-    font-size: 2rem;
-    margin-top: 0;
-  }
-  span {
-    font-weight: 200;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    @include titles-h3;
   }
 }
 
@@ -41,10 +46,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -53,3 +54,7 @@
     transform: rotate(360deg);
   }
 }
+// @media (min-width: 600px) {
+//   .App {
+//   }
+// }

@@ -1,6 +1,9 @@
-// import { FC } from "react";
 import React, { useState } from "react";
 import "animate.css";
+import "./Header.scss";
+
+import myFace from "../../assets/images/myFace.png";
+import gitHubIcon from "../../assets/icons/GitHub-Mark-64px.png";
 
 export interface IHeaderProps {
   name: String;
@@ -23,17 +26,23 @@ const Header = () => {
 
   return (
     <section className="header">
-      <div className="name">
+      <div className="myName">
         <h1>
           Jeremiah <span>Berndt</span>
         </h1>
         <h3>Software Engineer</h3>
+        <div>
+          <a href={gitHubIcon}>
+            <img
+              src="https://github.com/JeremiahBerndt"
+              alt="GitHub Profile"
+            ></img>
+          </a>
+        </div>
       </div>
-      <div>
-        <h3>
-          <a href="mailto:jeremiahberndt@gmail.com">Jeremiah</a>
-        </h3>
-        {/* <a href="https://www.linkedin.com/in/jeremiah-berndt/">LinkedIn</a> */}
+      <div className="myFace">
+        <img src={myFace} alt="my face"></img>
+        <p>&nbsp;</p>
       </div>
     </section>
   );

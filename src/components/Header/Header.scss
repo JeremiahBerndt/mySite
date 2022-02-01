@@ -1,0 +1,48 @@
+@use "../../App.scss" as App;
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding: 0 2em;
+}
+
+.myName {
+  text-align: right;
+  h1 {
+    margin-bottom: 0;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  span {
+    font-weight: 200;
+  }
+}
+
+.myFace {
+  position: relative;
+  align-items: center;
+  margin-top: 1.5em;
+  img {
+    position: inherit;
+    width: 16em;
+    z-index: 3;
+    border-radius: 50%;
+    box-shadow: 0.4em 0.4em 0.8em rgba(29, 29, 29, 0.295);
+  }
+  p {
+    background-color: App.$color-accent;
+    position: absolute;
+    left: -1em;
+    width: 240%;
+    top: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: min-content max-content;
+  }
+}
