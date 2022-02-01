@@ -5,7 +5,7 @@
 }
 
 // Colors
-$color-light: #b4bac5;
+$color-light: #dddfe0;
 $color-dark: "black";
 $color-accent: #df7e23;
 
@@ -21,9 +21,11 @@ $fs-h3: 2rem;
 @mixin titles-h3 {
   font-size: $fs-h3;
   letter-spacing: 0.5rem;
+  margin: 0.3em;
 }
 
 .App {
+  background-color: $color-light;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -35,25 +37,16 @@ $fs-h3: 2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  // font-size: calc(10px + 2vmin);
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 // @media (min-width: 600px) {
 //   .App {
 //   }
