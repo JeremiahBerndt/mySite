@@ -6,7 +6,7 @@
 
 // Colors
 $color-light: #dddfe0;
-$color-dark: "black";
+$color-dark: #272727;
 $color-accent: #df7e23;
 
 //Font Sizes
@@ -14,14 +14,24 @@ $fs-h1: 5rem;
 $fs-h3: 2rem;
 
 @mixin titles-h1 {
+  color: $color-dark;
   font-size: $fs-h1;
   letter-spacing: 0.5rem;
 }
 
 @mixin titles-h3 {
+  text-shadow: 1px 1px 2px white;
+  color: $color-dark;
   font-size: $fs-h3;
   letter-spacing: 0.5rem;
   margin: 0.3em;
+}
+
+@mixin features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .App {
@@ -31,6 +41,8 @@ $fs-h3: 2rem;
   justify-content: space-evenly;
   h1 {
     @include titles-h1;
+    margin-top: 1em;
+    margin-bottom: 0;
   }
   h3 {
     @include titles-h3;
@@ -38,12 +50,8 @@ $fs-h3: 2rem;
 }
 
 .body {
+  @include features;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  // font-size: calc(10px + 2vmin);
   color: white;
 }
 

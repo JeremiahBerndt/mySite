@@ -1,0 +1,9 @@
+@use "../../App.scss" as App;
+
+.projects {
+  @include App.features;
+  width: 92vw;
+  div {
+    width: 100%;
+  }
+}
