@@ -1,0 +1,14 @@
+@use "../../App.scss" as App;
+
+.project {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  > :nth-child(1) {
+    background-color: App.$color-dark;
+    width: 33%;
+  }
+  > :nth-child(2) {
+    background-color: yellow;
+  }
+}
